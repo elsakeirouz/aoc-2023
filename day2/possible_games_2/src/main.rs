@@ -1,7 +1,7 @@
 use std::{collections::HashMap, fs};
 
 fn main() {
-    let games: Vec<String> = fs::read_to_string(String::from("input.txt"))
+    let games: Vec<String> = fs::read_to_string(String::from("../possible_games/input.txt"))
         .expect("Could not read file")
         .lines()
         .map(|s| s.to_string())
