@@ -7,7 +7,6 @@ fn main() {
         .map(|s| s.to_string())
         .collect();
 
-    // 12 red, 13 green, 14 blue
     let mut colors_map = HashMap::from([
         ("red".to_string(), 0),
         ("green".to_string(), 0),
