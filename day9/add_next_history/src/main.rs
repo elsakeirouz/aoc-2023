@@ -29,13 +29,23 @@ fn next_value(history: &Vec<i64>) -> i64 {
     }
 }
 
+fn prev_value(history: &Vec<i64>) -> i64 {
+    if history.iter().all(|x| x == &0) {
+        0
+    } else {
+        *history.first().unwrap() - prev_value(&next_vector(history))
+    }
+}
+
 fn main() {
     let histories = parse_input();
-    let mut sum = 0;
+    let mut sum_1 = 0;
+    let mut sum_2 = 0;
 
     histories.iter().for_each(|history| {
-        sum += next_value(history);
+        sum_1 += next_value(history);
+        sum_2 += prev_value(history);
     });
 
-    println!("{sum}");
+    println!("PART 1 {sum_1}\nPART 2 {sum_2}");
 }
