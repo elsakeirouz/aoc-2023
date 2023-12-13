@@ -65,7 +65,13 @@ fn parse_input(part1: bool) -> Vec<(usize, usize)> {
     for (i, vec) in &mut input.iter_mut().enumerate() {
         for (j, &c) in vec.iter().enumerate() {
             if c == '#' {
-                galaxies.push(get_final_pos(j, i, &horizontal_indexes, &indexes, coef));
+                galaxies.push(get_final_pos(
+                    j,
+                    i,
+                    &horizontal_indexes,
+                    &indexes,
+                    coef,
+                ));
             }
         }
     }

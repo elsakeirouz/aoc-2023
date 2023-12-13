@@ -57,7 +57,8 @@ fn process_p2(input: &str) -> (Vec<Vec<char>>, Vec<Vec<usize>>) {
 }
 
 fn parse_input() -> String {
-    fs::read_to_string(String::from("../mini_input.txt")).expect("Could not read file")
+    fs::read_to_string(String::from("../input.txt"))
+        .expect("Could not read file")
 }
 
 fn arrange(rec: &Vec<char>, groups: &Vec<usize>) -> usize {

@@ -1,4 +1,4 @@
-use std::{fs};
+use std::fs;
 
 fn parse_input() -> Vec<String> {
     fs::read_to_string(String::from("../input.txt"))
@@ -18,7 +18,8 @@ fn get_numbers(s: &str) -> Vec<u64> {
 fn main() {
     let lines = parse_input();
 
-    let mut seeds: Vec<u64> = get_numbers(lines[0].split(':').collect::<Vec<&str>>()[1]);
+    let mut seeds: Vec<u64> =
+        get_numbers(lines[0].split(':').collect::<Vec<&str>>()[1]);
 
     let mut ind = 2;
 

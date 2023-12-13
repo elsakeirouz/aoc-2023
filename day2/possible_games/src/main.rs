@@ -32,7 +32,7 @@ fn main() {
                 continue;
             }
         }
-        if !impossible{
+        if !impossible {
             sum += game_number;
         }
     }

@@ -116,7 +116,10 @@ fn sort_hands(hands: &HashMap<String, i64>, part1: bool) -> Vec<Vec<String>> {
     sorted_hands
 }
 
-fn find_res(hands: &HashMap<String, i64>, sorted_hands: &Vec<Vec<String>>) -> i64 {
+fn find_res(
+    hands: &HashMap<String, i64>,
+    sorted_hands: &Vec<Vec<String>>,
+) -> i64 {
     let ordered_winnings = sorted_hands.into_iter().flatten().map(|x| hands[x]);
 
     let mut i = 0;
